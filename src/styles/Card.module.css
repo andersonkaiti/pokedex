@@ -1,0 +1,152 @@
+.card {
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em;
+    width: 20em;
+    background-color: #4d4d4d;
+    border-radius: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.card:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+.pokemonData h3 {
+    text-transform: capitalize;
+    margin: 1em 0;
+}
+
+.cardId {
+    font-weight: bold;
+    border-radius: 1em;
+}
+
+.button {
+    margin: 1em 0;
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 1em;
+    border-radius: .5em;
+    transition: all .2s;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pokemonData {
+    position: relative;
+}
+
+.pokemonImage {
+    position: relative;
+}
+
+.pokemonImage::before {
+    content: "";
+    background-image: url("../../public/pokebola.png");
+    background-size: cover;
+    background-position: 50%;
+    width: 150px;
+    height: 150px;
+    left: -25px;
+    top: -25px;
+    z-index: 0;
+    opacity: .2;
+    position: absolute;
+}
+
+.pokemonImage img {
+    position: relative;
+    z-index: 2;
+}
+
+.type_normal {
+    background-color: #aa9;
+}
+
+.type_fire {
+    background-color: #f42;
+}
+
+.type_water {
+    background-color: #39f;
+}
+
+.type_electric {
+    background-color: #fc3;
+}
+
+.type_grass {
+    background-color: #7c5;
+}
+
+.type_ice {
+    background-color: #6cf;
+}
+
+.type_fighting {
+    background-color: #b54;
+}
+
+.type_poison {
+    background-color: #a59;
+}
+
+.type_ground {
+    background-color: #db5;
+}
+
+.type_flying {
+    background-color: #89f;
+}
+
+.type_psychic {
+    background-color: #f59;
+}
+
+.type_bug {
+    background-color: #ab2;
+}
+
+.type_rock {
+    background-color: #ba6;
+}
+
+.type_ghost {
+    background-color: #66b;
+}
+
+.type_dragon {
+    background-color: #76e;
+}
+
+.type_dark {
+    background-color: #754;
+}
+
+.type_steel {
+    background-color: #aab;
+}
+
+.type_fairy {
+    background-color: #e9e;
+}
+
+@media screen and (max-width: 703px) {
+    .card {
+        width: 100%;
+    }
+}

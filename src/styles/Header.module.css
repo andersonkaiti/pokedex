@@ -1,0 +1,13 @@
+.header {
+    /* background-color: #e33d33; */
+    background-color: #000;
+    height: 4em;
+    padding: 1em 2em;
+}
+
+.logo {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
