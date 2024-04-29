@@ -1,21 +1,21 @@
-import styles from "@/styles/Card.module.css";
+import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { getPokemonType } from "@/services/pokemon-service";
+import { PokemonType } from "@/types/pokemon-types";
 
-async function getPokemonType(url: string) {
-    const res = await fetch(url);
-    const data = await res.json();
-    return data.types[0].type.name;
+type CardProps = {
+    pokemon: PokemonType
 }
 
-export default async function Card({ pokemon }: any) {
+export default async function Card({ pokemon }: CardProps) {
     const pokemonType = await getPokemonType(pokemon.url);
 
     return (
         <div className={`${styles.card} ${styles["type_" + pokemonType]}`}>
             <div className={styles.pokemonData}>
                 <h3>{pokemon.name}</h3>
-                <p className={styles.cardId}>#{pokemon.id.toString().padStart(4, "0")}</p>
+                <p className={styles.cardId}>#{pokemon.id?.toString().padStart(4, "0")}</p>
                 <Link className={styles.button} href={`/pokemon/${pokemon.id}`}>
                     DETALHES
                 </Link>
