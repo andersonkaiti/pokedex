@@ -56,7 +56,7 @@
 
 .pokemonImage::before {
     content: "";
-    background-image: url("../../public/pokebola.png");
+    background-image: url("/pokebola.png");
     background-size: cover;
     background-position: 50%;
     width: 150px;
